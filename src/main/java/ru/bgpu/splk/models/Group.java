@@ -6,14 +6,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "groups")
+public class Group {
 
     @Id @GeneratedValue
-    private Long id;
+    private long id;
 
-    private String name;
-    private String surname;
-    private String phoneNumber;
-    private String email;
+    
 }
