@@ -7,16 +7,18 @@ import jakarta.persistence.Table;
 import jakarta.persistence.*;
 import java.util.List;
 
-@Entity
-@Table(name = "groups")
-public class Group {
 
-    @Id @GeneratedValue
+@Entity
+@Table(name = "categories")
+public class Category {
+
+    @Id
+    @GeneratedValue
     private long id;
 
     @Column
-    private String group_name;
+    private String category_name;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    private List<User> users;
+    @OneToMany(fetch = FetchType.EAGER)
+    private List<Request> requests;
 }
