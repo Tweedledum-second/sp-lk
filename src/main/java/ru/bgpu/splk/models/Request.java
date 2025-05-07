@@ -3,7 +3,6 @@ package ru.bgpu.splk.models;
 import jakarta.persistence.*;
 import org.javamoney.moneta.Money;
 import java.util.Date;
-import ru.bgpu.splk.types.RequestStatus;
 
 @Entity
 @Table(name = "requests")
