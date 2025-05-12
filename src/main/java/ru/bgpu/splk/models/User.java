@@ -2,8 +2,10 @@ package ru.bgpu.splk.models;
 
 import java.util.List;
 import jakarta.persistence.*;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Entity
+@EntityScan
 @Table(name = "users")
 public class User {
 

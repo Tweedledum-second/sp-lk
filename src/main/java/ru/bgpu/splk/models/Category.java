@@ -5,10 +5,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.*;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import java.util.List;
 
 
 @Entity
+@EntityScan
 @Table(name = "categories")
 public class Category {
 

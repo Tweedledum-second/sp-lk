@@ -2,24 +2,24 @@ package ru.bgpu.splk.models;
 
 import jakarta.persistence.*;
 import org.javamoney.moneta.Money;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import java.util.Date;
 
 @Entity
+@EntityScan
 @Table(name = "requests")
 public class Request {
 
     @Id @GeneratedValue
     private long id;
 
-    @Column
     @ManyToOne(fetch = FetchType.EAGER)
     private User user;
 
-    @Column
     @ManyToOne(fetch = FetchType.EAGER)
     private Category category;
 
-    @Column
     @ManyToOne(fetch = FetchType.EAGER)
     private Status status;
 
