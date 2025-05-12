@@ -23,6 +23,9 @@ public class Group {
     @ManyToMany(fetch = FetchType.EAGER)
     private List<User> users;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Privilege> privileges;
+
     public long getId() {
         return id;
     }
@@ -47,4 +50,11 @@ public class Group {
         this.users = users;
     }
 
+    public List<Privilege> getPrivileges() {
+        return privileges;
+    }
+
+    public void setPrivileges(List<Privilege> privileges) {
+        this.privileges = privileges;
+    }
 }

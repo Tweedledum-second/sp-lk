@@ -24,11 +24,10 @@ public class User {
     @Column
     private String email;
 
-    @Column
+
     @OneToMany(fetch = FetchType.EAGER)
     private List<Request> requests;
 
-    @Column
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Group> groups;
 
